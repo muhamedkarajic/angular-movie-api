@@ -1,0 +1,11 @@
+@import './variables.scss';
+@import '~bootstrap/scss/bootstrap-grid.scss';
+@import "./normalize.scss";
+@import "./reset.scss";
+@import "./default.scss";
+h1 {
+  color: $primary-color;
+  &:hover {
+    color: $primary-color-hover;
+  }
+}

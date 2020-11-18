@@ -1,0 +1,44 @@
+@import 'src/styles/variables.scss';
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: #ffffff00 !important;
+  -webkit-focus-ring-color: #ffffff00 !important;
+  outline: none !important;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: $primary-color;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $primary-color-hover;
+}
+
+::-moz-selection {
+  color: white;
+  background: $primary-color;
+}
+
+::selection {
+  color: white;
+  background: $primary-color;
+}
+
+.no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
