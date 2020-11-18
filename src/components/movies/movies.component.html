@@ -1,0 +1,5 @@
+<div *ngIf="movieResponse$ | async as movieResponse" class="row">
+  <div *ngFor="let movie of movieResponse.results" class="col-md-6 col-xs-12">
+    <movie-preview [movie]="movie"></movie-preview>
+  </div>
+</div>
