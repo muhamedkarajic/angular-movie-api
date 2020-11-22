@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { ContainerComponent } from './../components/container/container.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';

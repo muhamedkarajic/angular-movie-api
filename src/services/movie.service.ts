@@ -25,4 +25,13 @@ export class MovieService {
     }
     return this.httpClient.get<MovieResponse>(endpoint);
   }
+
+  getMovies(query: string, page: number) {
+    console.log('function executed');
+    if (query && query.length >= 3)
+      return this.getAll(query, page > 0 ? page : 1);
+    else {
+      return this.getTopRated();
+    }
+  }
 }

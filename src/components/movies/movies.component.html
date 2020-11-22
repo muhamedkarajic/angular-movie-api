@@ -1,17 +1,20 @@
-<div class="row">
-  <search (search)="keywordChange($event)" [target]="'query'" [placeholder]="'Search for movies'" class="col-md-6"></search>
-  <div class="col-md-6 d-none d-md-block"></div>
-</div>
-
-<div class="row" *ngIf="movieResponse$ | async as movieResponse">
-  <div *ngFor="let movie of movieResponse.results| paginate: { itemsPerPage: 20, currentPage: queryParams.page, totalItems: 1000  }" class="col-md-6 col-xs-12">
-    <movie-preview [movie]="movie"></movie-preview>
+<container *ngIf="queryParams$ | async as queryParams" >
+  <div class="row">
+    <search [target]="'query'" [defaultValue]="queryParams.query" [placeholder]="'Search for movies'" class="col-md-6"></search>
+    <div class="col-md-6 d-none d-md-block"></div>
   </div>
-</div>
 
-<div class="row">
-  <div class="col-12 mt-5">
-    <pagination-controls (pageChange)="pageChange($event)"></pagination-controls>
+  <div class="row" *ngIf="movieResponse$ | async as movieResponse">
+    <div *ngFor="let movie of movieResponse.results| paginate: { itemsPerPage: 20, currentPage: queryParams.page, totalItems: 1000  }" class="col-md-6 col-xs-12">
+      <movie-preview [movie]="movie"></movie-preview>
+    </div>
   </div>
-</div>
+
+  <div class="row">
+    <div class="col-12 mt-5">
+      <pagination-controls (pageChange)="pageChange($event)"></pagination-controls>
+    </div>
+  </div>
+</container>
+
 
