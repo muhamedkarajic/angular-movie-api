@@ -16,5 +16,9 @@ nav {
       color: $primary-color-hover;
       border-bottom: 2px solid $primary-color-hover;
     }
+    &.active {
+      color: $primary-color-hover;
+      border-bottom: 2px solid $primary-color-hover;
+    }
   }
 }

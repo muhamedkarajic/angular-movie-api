@@ -41,4 +41,6 @@
   user-select: none;
 }
 
-
+.ngx-pagination .current {
+  background: $primary-color!important;
+}

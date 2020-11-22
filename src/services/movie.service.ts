@@ -15,7 +15,14 @@ export class MovieService {
     );
   }
 
-
-
-
+  getAll(query: string, page: number = 1) {
+    let endpoint = `${environment.apiUrl}/search/movie?api_key=${environment.apiKey}`;
+    if (query) {
+      endpoint += `&query=${query}`;
+    }
+    if (page > 0) {
+      endpoint += `&page=${page}`;
+    }
+    return this.httpClient.get<MovieResponse>(endpoint);
+  }
 }

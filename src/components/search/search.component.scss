@@ -1,0 +1,13 @@
+@import "src/styles/variables.scss";
+
+
+#search-input {
+  width: 100%;
+  padding: $spacing-vertical / 2 $spacing-horizontal / 2;
+  color: $primary-color;
+  border: 1px solid $primary-color-hover;
+  &::placeholder
+  {
+    color: $primary-color-hover;
+  }
+}
