@@ -1,4 +1,4 @@
-@import 'src/styles/variables.scss';
+@import "src/styles/variables.scss";
 
 * {
   box-sizing: border-box;
@@ -33,5 +33,5 @@
 }
 
 .ngx-pagination .current {
-  background: $primary-color!important;
+  background: $primary-color !important;
 }

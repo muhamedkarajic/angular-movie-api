@@ -1,10 +1,10 @@
 <div class="row">
-  <search (search)="keywordChange($event)" [placeholder]="'Search for movies'" class="col-md-6"></search>
+  <search (search)="keywordChange($event)" [target]="'query'" [placeholder]="'Search for movies'" class="col-md-6"></search>
   <div class="col-md-6 d-none d-md-block"></div>
 </div>
 
 <div class="row" *ngIf="movieResponse$ | async as movieResponse">
-  <div *ngFor="let movie of movieResponse.results| paginate: { itemsPerPage: 20, currentPage: page, totalItems: 1000  }" class="col-md-6 col-xs-12">
+  <div *ngFor="let movie of movieResponse.results| paginate: { itemsPerPage: 20, currentPage: queryParams.page, totalItems: 1000  }" class="col-md-6 col-xs-12">
     <movie-preview [movie]="movie"></movie-preview>
   </div>
 </div>
