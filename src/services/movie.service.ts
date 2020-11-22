@@ -27,11 +27,11 @@ export class MovieService {
   }
 
   getMovies(query: string, page: number) {
-    console.log('function executed');
+    page = page > 0 ? page : 1;
     if (query && query.length >= 3)
-      return this.getAll(query, page > 0 ? page : 1);
+      return this.getAll(query, page);
     else {
-      return this.getTopRated();
+      return this.getTopRated(page);
     }
   }
 }

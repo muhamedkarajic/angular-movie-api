@@ -6,6 +6,7 @@
   padding: $spacing-vertical / 2 $spacing-horizontal / 2;
   color: $primary-color;
   border: 1px solid $primary-color-hover;
+  font-size: $font-size;
   &::placeholder
   {
     color: $primary-color-hover;

@@ -1,3 +1,4 @@
+import { MovieDetailsComponent } from './../components/movie-details/movie-details.component';
 import { RouterModule } from '@angular/router';
 import { ContainerComponent } from './../components/container/container.component';
 import { BrowserModule } from '@angular/platform-browser';
@@ -14,8 +15,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, ContainerComponent, MoviesComponent, MoviePreviewComponent, SearchComponent],
-  exports: [NavbarComponent, ContainerComponent, MoviesComponent, MoviePreviewComponent, SearchComponent],
+  declarations: [AppComponent, NavbarComponent, ContainerComponent, MoviesComponent, MoviePreviewComponent, SearchComponent, MovieDetailsComponent],
+  exports: [NavbarComponent, ContainerComponent, MoviesComponent, MoviePreviewComponent, SearchComponent, MovieDetailsComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, ReactiveFormsModule, NgxPaginationModule],
   providers: [],
   bootstrap: [AppComponent],

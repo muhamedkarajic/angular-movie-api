@@ -1,6 +1,6 @@
-<div id="movie-preview">
+<a routerLink='/movie-details' id="movie-preview" >
     <img id="img" [src]="movie.poster_path ? url + movie.poster_path : '/assets/img-not-found.png'" alt="">
   <div id="content">
     {{ movie.title | titlecase }}
   </div>
-</div>
+</a>
